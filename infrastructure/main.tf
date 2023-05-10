@@ -37,13 +37,6 @@ resource "aws_security_group" "instance_security_group" {
   name = "instance_security_group"
   vpc_id = "vpc-0340562e60e3b5032"
 
-  ingress {
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   tags = {
     Name = "instance_security_group"
   }
